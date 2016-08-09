@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52186C921D58EDFD00B1D94B /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52186C911D58EDFD00B1D94B /* ChallengeViewController.swift */; };
+		F86BA0FA04A623EB79325516 /* Pods_Auyrma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144A9B07F839D3DCCBC95241 /* Pods_Auyrma.framework */; };
+		FA0FBDD21D39056800065F0B /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDD11D39056800065F0B /* ReminderTableViewController.swift */; };
+		FA18AC741D387BA80094D5DE /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18AC731D387BA80094D5DE /* Reminder.swift */; };
+		FA18AC761D387DCC0094D5DE /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18AC751D387DCC0094D5DE /* ReminderListViewController.swift */; };
+		FA3A31F21D2E36AF00AF4C9B /* PharmacyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A31F11D2E36AF00AF4C9B /* PharmacyLocationViewController.swift */; };
+		FA3A31F41D2E37AF00AF4C9B /* MyPillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A31F31D2E37AF00AF4C9B /* MyPillViewController.swift */; };
+		FA3A31F61D2E388700AF4C9B /* AnalogResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A31F51D2E388700AF4C9B /* AnalogResultViewController.swift */; };
+		FA3A31F91D2E3BAD00AF4C9B /* Pill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A31F81D2E3BAD00AF4C9B /* Pill.swift */; };
+		FA3EC28C1D3F4AA2005AD753 /* ConsultancyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC28B1D3F4AA2005AD753 /* ConsultancyViewController.swift */; };
+		FA72E84A1D3CEA2A009229B5 /* PharmacyGeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72E8491D3CEA2A009229B5 /* PharmacyGeoLocation.swift */; };
+		FA77E0491D543E4000C91709 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77E0481D543E4000C91709 /* CameraViewController.swift */; };
+		FA7919951D2E7C5200FCE3C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7919941D2E7C5200FCE3C7 /* AppDelegate.m */; };
+		FA7CEB451D30A6980065CD4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7CEB441D30A6980065CD4D /* GoogleService-Info.plist */; };
+		FA7CEB471D30BCA50065CD4D /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CEB461D30BCA50065CD4D /* ReminderViewController.swift */; };
+		FA7CEB491D30BF570065CD4D /* PickDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CEB481D30BF570065CD4D /* PickDaysViewController.swift */; };
+		FA83D65E1D2E2BBF001F5538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83D65D1D2E2BBF001F5538 /* AppDelegate.swift */; };
+		FA83D6601D2E2BBF001F5538 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83D65F1D2E2BBF001F5538 /* ViewController.swift */; };
+		FA83D6651D2E2BBF001F5538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83D6641D2E2BBF001F5538 /* Assets.xcassets */; };
+		FA83D6681D2E2BBF001F5538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA83D6661D2E2BBF001F5538 /* LaunchScreen.storyboard */; };
+		FA9B97491D2F9D61007B7E3B /* PillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B97481D2F9D61007B7E3B /* PillTableViewCell.swift */; };
+		FA9B974B1D2FA64B007B7E3B /* PillInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B974A1D2FA64B007B7E3B /* PillInfoViewController.swift */; };
+		FAA5FE8F1D47208A0017A418 /* RateUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5FE8E1D47208A0017A418 /* RateUsViewController.swift */; };
+		FAA5FE911D4720D60017A418 /* RateUsUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5FE901D4720D60017A418 /* RateUsUrl.swift */; };
+		FAB284311D45EA8500CFE493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB2842F1D45EA8500CFE493 /* Main.storyboard */; };
+		FAB284331D46329000CFE493 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB284321D46329000CFE493 /* ReminderTableViewCell.swift */; };
+		FAC1482F1D5461C20001BD42 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1482E1D5461C20001BD42 /* ShareViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F0100A567462EA189AE5F65 /* Pods-Auyrma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auyrma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Auyrma/Pods-Auyrma.release.xcconfig"; sourceTree = "<group>"; };
+		144A9B07F839D3DCCBC95241 /* Pods_Auyrma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auyrma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52186C911D58EDFD00B1D94B /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		72E3056C12D7B8B2304C65F2 /* Pods-Auyrma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auyrma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Auyrma/Pods-Auyrma.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0FBDD11D39056800065F0B /* ReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
+		FA18AC731D387BA80094D5DE /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		FA18AC751D387DCC0094D5DE /* ReminderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
+		FA3A31F11D2E36AF00AF4C9B /* PharmacyLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PharmacyLocationViewController.swift; sourceTree = "<group>"; };
+		FA3A31F31D2E37AF00AF4C9B /* MyPillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPillViewController.swift; sourceTree = "<group>"; };
+		FA3A31F51D2E388700AF4C9B /* AnalogResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogResultViewController.swift; sourceTree = "<group>"; };
+		FA3A31F81D2E3BAD00AF4C9B /* Pill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pill.swift; sourceTree = "<group>"; };
+		FA3EC28B1D3F4AA2005AD753 /* ConsultancyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultancyViewController.swift; sourceTree = "<group>"; };
+		FA72E8491D3CEA2A009229B5 /* PharmacyGeoLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PharmacyGeoLocation.swift; sourceTree = "<group>"; };
+		FA77E0481D543E4000C91709 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		FA7919931D2E7C5200FCE3C7 /* Auyrma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Auyrma-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA7919941D2E7C5200FCE3C7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FA7CEB441D30A6980065CD4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA7CEB461D30BCA50065CD4D /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		FA7CEB481D30BF570065CD4D /* PickDaysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickDaysViewController.swift; sourceTree = "<group>"; };
+		FA83D65A1D2E2BBF001F5538 /* Auyrma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auyrma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA83D65D1D2E2BBF001F5538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA83D65F1D2E2BBF001F5538 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA83D6641D2E2BBF001F5538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA83D6671D2E2BBF001F5538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA83D6691D2E2BBF001F5538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9B97481D2F9D61007B7E3B /* PillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillTableViewCell.swift; sourceTree = "<group>"; };
+		FA9B974A1D2FA64B007B7E3B /* PillInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillInfoViewController.swift; sourceTree = "<group>"; };
+		FAA5FE8E1D47208A0017A418 /* RateUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateUsViewController.swift; sourceTree = "<group>"; };
+		FAA5FE901D4720D60017A418 /* RateUsUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateUsUrl.swift; sourceTree = "<group>"; };
+		FAB284301D45EA8500CFE493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAB284321D46329000CFE493 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		FAC1482E1D5461C20001BD42 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA83D6571D2E2BBF001F5538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F86BA0FA04A623EB79325516 /* Pods_Auyrma.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF961BA87581DFE9EA2B0055 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72E3056C12D7B8B2304C65F2 /* Pods-Auyrma.debug.xcconfig */,
+				0F0100A567462EA189AE5F65 /* Pods-Auyrma.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0C8365BA2F10DACC3D01A00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				144A9B07F839D3DCCBC95241 /* Pods_Auyrma.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA3A31F01D2E367900AF4C9B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA77E0481D543E4000C91709 /* CameraViewController.swift */,
+				FA83D65F1D2E2BBF001F5538 /* ViewController.swift */,
+				FA3A31F31D2E37AF00AF4C9B /* MyPillViewController.swift */,
+				FA3A31F51D2E388700AF4C9B /* AnalogResultViewController.swift */,
+				FA18AC751D387DCC0094D5DE /* ReminderListViewController.swift */,
+				FA7CEB461D30BCA50065CD4D /* ReminderViewController.swift */,
+				FA9B974A1D2FA64B007B7E3B /* PillInfoViewController.swift */,
+				FA3A31F11D2E36AF00AF4C9B /* PharmacyLocationViewController.swift */,
+				FA0FBDD11D39056800065F0B /* ReminderTableViewController.swift */,
+				FAA5FE8E1D47208A0017A418 /* RateUsViewController.swift */,
+				FA3EC28B1D3F4AA2005AD753 /* ConsultancyViewController.swift */,
+				FA7CEB481D30BF570065CD4D /* PickDaysViewController.swift */,
+				FAC1482E1D5461C20001BD42 /* ShareViewController.swift */,
+				52186C911D58EDFD00B1D94B /* ChallengeViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		FA3A31F71D2E3BA200AF4C9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA3A31F81D2E3BAD00AF4C9B /* Pill.swift */,
+				FA18AC731D387BA80094D5DE /* Reminder.swift */,
+				FA72E8491D3CEA2A009229B5 /* PharmacyGeoLocation.swift */,
+				FAA5FE901D4720D60017A418 /* RateUsUrl.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FA83D6511D2E2BBF001F5538 = {
+			isa = PBXGroup;
+			children = (
+				FA83D65C1D2E2BBF001F5538 /* Auyrma */,
+				FA83D65B1D2E2BBF001F5538 /* Products */,
+				AF961BA87581DFE9EA2B0055 /* Pods */,
+				F0C8365BA2F10DACC3D01A00 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA83D65B1D2E2BBF001F5538 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA83D65A1D2E2BBF001F5538 /* Auyrma.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA83D65C1D2E2BBF001F5538 /* Auyrma */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B97471D2F9D4D007B7E3B /* View */,
+				FA3A31F71D2E3BA200AF4C9B /* Model */,
+				FA3A31F01D2E367900AF4C9B /* ViewController */,
+				FA83D66F1D2E2BDD001F5538 /* Supporting files */,
+			);
+			path = Auyrma;
+			sourceTree = "<group>";
+		};
+		FA83D66F1D2E2BDD001F5538 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2842F1D45EA8500CFE493 /* Main.storyboard */,
+				FA7CEB441D30A6980065CD4D /* GoogleService-Info.plist */,
+				FA83D65D1D2E2BBF001F5538 /* AppDelegate.swift */,
+				FA83D6641D2E2BBF001F5538 /* Assets.xcassets */,
+				FA83D6661D2E2BBF001F5538 /* LaunchScreen.storyboard */,
+				FA83D6691D2E2BBF001F5538 /* Info.plist */,
+				FA7919941D2E7C5200FCE3C7 /* AppDelegate.m */,
+				FA7919931D2E7C5200FCE3C7 /* Auyrma-Bridging-Header.h */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		FA9B97471D2F9D4D007B7E3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B97481D2F9D61007B7E3B /* PillTableViewCell.swift */,
+				FAB284321D46329000CFE493 /* ReminderTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA83D6591D2E2BBF001F5538 /* Auyrma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA83D66C1D2E2BBF001F5538 /* Build configuration list for PBXNativeTarget "Auyrma" */;
+			buildPhases = (
+				5F2FA0F6D38B509C4F5B4059 /* [CP] Check Pods Manifest.lock */,
+				FA83D6561D2E2BBF001F5538 /* Sources */,
+				FA83D6571D2E2BBF001F5538 /* Frameworks */,
+				FA83D6581D2E2BBF001F5538 /* Resources */,
+				ECFADE36A51396C84FB152F5 /* [CP] Embed Pods Frameworks */,
+				33CDD7BAE89F834ADF8900DE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Auyrma;
+			productName = Auyrma;
+			productReference = FA83D65A1D2E2BBF001F5538 /* Auyrma.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA83D6521D2E2BBF001F5538 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Yerzhan Mademikhanov";
+				TargetAttributes = {
+					FA83D6591D2E2BBF001F5538 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = QDFYJKM32N;
+					};
+				};
+			};
+			buildConfigurationList = FA83D6551D2E2BBF001F5538 /* Build configuration list for PBXProject "Auyrma" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA83D6511D2E2BBF001F5538;
+			productRefGroup = FA83D65B1D2E2BBF001F5538 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA83D6591D2E2BBF001F5538 /* Auyrma */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA83D6581D2E2BBF001F5538 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA83D6681D2E2BBF001F5538 /* LaunchScreen.storyboard in Resources */,
+				FA7CEB451D30A6980065CD4D /* GoogleService-Info.plist in Resources */,
+				FA83D6651D2E2BBF001F5538 /* Assets.xcassets in Resources */,
+				FAB284311D45EA8500CFE493 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33CDD7BAE89F834ADF8900DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Auyrma/Pods-Auyrma-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F2FA0F6D38B509C4F5B4059 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECFADE36A51396C84FB152F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Auyrma/Pods-Auyrma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA83D6561D2E2BBF001F5538 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52186C921D58EDFD00B1D94B /* ChallengeViewController.swift in Sources */,
+				FAC1482F1D5461C20001BD42 /* ShareViewController.swift in Sources */,
+				FA3A31F91D2E3BAD00AF4C9B /* Pill.swift in Sources */,
+				FA77E0491D543E4000C91709 /* CameraViewController.swift in Sources */,
+				FAA5FE8F1D47208A0017A418 /* RateUsViewController.swift in Sources */,
+				FA83D6601D2E2BBF001F5538 /* ViewController.swift in Sources */,
+				FA3A31F61D2E388700AF4C9B /* AnalogResultViewController.swift in Sources */,
+				FA83D65E1D2E2BBF001F5538 /* AppDelegate.swift in Sources */,
+				FA3A31F21D2E36AF00AF4C9B /* PharmacyLocationViewController.swift in Sources */,
+				FA3A31F41D2E37AF00AF4C9B /* MyPillViewController.swift in Sources */,
+				FA9B97491D2F9D61007B7E3B /* PillTableViewCell.swift in Sources */,
+				FA0FBDD21D39056800065F0B /* ReminderTableViewController.swift in Sources */,
+				FA18AC761D387DCC0094D5DE /* ReminderListViewController.swift in Sources */,
+				FA7CEB471D30BCA50065CD4D /* ReminderViewController.swift in Sources */,
+				FA18AC741D387BA80094D5DE /* Reminder.swift in Sources */,
+				FA7919951D2E7C5200FCE3C7 /* AppDelegate.m in Sources */,
+				FAB284331D46329000CFE493 /* ReminderTableViewCell.swift in Sources */,
+				FA72E84A1D3CEA2A009229B5 /* PharmacyGeoLocation.swift in Sources */,
+				FA7CEB491D30BF570065CD4D /* PickDaysViewController.swift in Sources */,
+				FAA5FE911D4720D60017A418 /* RateUsUrl.swift in Sources */,
+				FA9B974B1D2FA64B007B7E3B /* PillInfoViewController.swift in Sources */,
+				FA3EC28C1D3F4AA2005AD753 /* ConsultancyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA83D6661D2E2BBF001F5538 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA83D6671D2E2BBF001F5538 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAB2842F1D45EA8500CFE493 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB284301D45EA8500CFE493 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA83D66A1D2E2BBF001F5538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA83D66B1D2E2BBF001F5538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA83D66D1D2E2BBF001F5538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72E3056C12D7B8B2304C65F2 /* Pods-Auyrma.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Auyrma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Auyrma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Auyrma/Auyrma-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FA83D66E1D2E2BBF001F5538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F0100A567462EA189AE5F65 /* Pods-Auyrma.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Auyrma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Auyrma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Auyrma/Auyrma-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA83D6551D2E2BBF001F5538 /* Build configuration list for PBXProject "Auyrma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA83D66A1D2E2BBF001F5538 /* Debug */,
+				FA83D66B1D2E2BBF001F5538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA83D66C1D2E2BBF001F5538 /* Build configuration list for PBXNativeTarget "Auyrma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA83D66D1D2E2BBF001F5538 /* Debug */,
+				FA83D66E1D2E2BBF001F5538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA83D6521D2E2BBF001F5538 /* Project object */;
+}
