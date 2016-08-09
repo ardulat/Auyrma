@@ -8,13 +8,31 @@
 
 import UIKit
 
-class ChallengeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+protocol WordsIndexDelegate {
+    func didUpdatePageIndex(index: Int)
+}
+
+class ChallengeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, WordsIndexDelegate {
     
-    var selectedImage = UIImage()
+    @IBOutlet weak var containerView: UIView!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    var words = ["asd", "qwe", "zxc"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pageControl.numberOfPages = words.count
     }
+    
+    // MARK: - Container and Page Control
+    
+    func didUpdatePageIndex(index: Int) {
+        self.pageControl.currentPage = index
+    }
+    
+    // MARK: - Camera and Photo Library
     
     @IBAction func photoLibraryButtonTapped(sender: UIButton) {
         
@@ -39,5 +57,12 @@ class ChallengeViewController: UIViewController, UIImagePickerControllerDelegate
             let shareVC = segue.destinationViewController as! ShareViewController
             shareVC.defaultImage = sender as? UIImage
         }
+        
+        if let wordsPVC = segue.destinationViewController as? PageViewController {
+            wordsPVC.words = self.words
+            wordsPVC.wordsDelegate = self
+        }
+
     }
+    
 }

@@ -12,6 +12,7 @@ import AVFoundation
 class CameraViewController: UIViewController {
     
     var previewView: UIView!
+    var overlayImageView = UIImageView()
 
     var session: AVCaptureSession?
     var stillImageOutput: AVCaptureStillImageOutput?
@@ -19,6 +20,8 @@ class CameraViewController: UIViewController {
     var counter: Int = 1
     
     var mainImage: UIImage? = nil
+    
+    var backCamera = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,6 @@ class CameraViewController: UIViewController {
         self.counter = num
         
         self.previewView = UIView(frame: CGRect(x: 0, y: 10, width: self.view.frame.width, height: self.view.frame.width))
-        
         self.view.addSubview(previewView)
         
         if session != nil {
@@ -38,13 +40,14 @@ class CameraViewController: UIViewController {
         session = AVCaptureSession()
         session!.sessionPreset = AVCaptureSessionPresetPhoto
         
-        var backCamera = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        
         if num == 2 {
-            let devices: NSArray = AVCaptureDevice.devices();
+            let devices: NSArray = AVCaptureDevice.devices()
             for de in devices {
                 let deviceConverted = de as! AVCaptureDevice
-                if(deviceConverted.position == .Front){
+                if(deviceConverted.position == .Front) {
+                    backCamera = deviceConverted
+                }
+                if(deviceConverted.position == .Back) {
                     backCamera = deviceConverted
                 }
             }
@@ -78,6 +81,12 @@ class CameraViewController: UIViewController {
         previewView.layer.addSublayer(videoPreviewLayer!)
         session!.startRunning()
         videoPreviewLayer!.frame = previewView.bounds
+        
+        
+        let subimage1 = UIImage(named: "overlay")
+        self.overlayImageView.image = subimage1
+        overlayImageView.frame = previewView.bounds
+        previewView.addSubview(overlayImageView)
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -102,7 +111,13 @@ class CameraViewController: UIViewController {
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     let dataProvider = CGDataProviderCreateWithCFData(imageData)
                     let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
-                    let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+                    var image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+                    
+//                    if self.backCamera.position == .Front {
+//                        let flippedImage = UIImage(CGImage: image.CGImage!, scale: image.scale, orientation: UIImageOrientation.LeftMirrored)
+//                        image = flippedImage
+//                    }
+                    
                     self.mainImage = image
                     self.performSegueWithIdentifier("SegueCaptured", sender: nil)
                     // ...
@@ -119,3 +134,7 @@ class CameraViewController: UIViewController {
         }
     }
 }
+
+
+
+

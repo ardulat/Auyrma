@@ -17,8 +17,8 @@ class ShareViewController: UIViewController, UIDocumentInteractionControllerDele
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var overlayImageView: UIImageView!
-
-    @IBOutlet var container: UIView!
+    
+    @IBOutlet weak var container: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
