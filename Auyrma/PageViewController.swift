@@ -10,7 +10,7 @@ import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate {
     
-    var words = ["asd", "qwe", "zxc"]
+    var words: [String]!
     var indexGlobal = 0
     var wordsDelegate: WordsIndexDelegate!
     
@@ -32,10 +32,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate {
         indexGlobal = index
         return contentViewController
     }
-    
-    
 }
-
 
 extension PageViewController: UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
@@ -88,25 +85,6 @@ extension PageViewController: UIPageViewControllerDataSource {
         if let contentVC = viewControllers?.first as? ContentViewController {
             let index = words.indexOf(contentVC.text)
             self.wordsDelegate.didUpdatePageIndex(index!)
-            //return index!
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

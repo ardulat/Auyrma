@@ -18,7 +18,10 @@ class ChallengeViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var words = ["asd", "qwe", "zxc"]
+    var words = ["Ayurma - за доступный здоровый образ жизни для каждого казахстанца",
+                 "Присоединяйся и выставляй своё спортивное фото в поддержку сборной Казахстана в Рио",
+                 "Отмечай фото хештегом #algakzrio2016 и не забудь передать эстафету 7 друзьям",
+                 "Лучшие фото попадут на страницу @auyrma_app в инстаграм!"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

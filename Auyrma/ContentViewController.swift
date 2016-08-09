@@ -17,7 +17,8 @@ class ContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textLabel.text = "fuck it"
+        textLabel.text = text
+//        textLabel.lineBreakMode = .ByTruncatingTail
     }
     
 }
