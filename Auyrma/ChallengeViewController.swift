@@ -18,7 +18,7 @@ class ChallengeViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func photoLibraryButtonTapped(sender: UIButton) {
         
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary

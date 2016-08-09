@@ -14,12 +14,11 @@ class ShareViewController: UIViewController, UIDocumentInteractionControllerDele
     var defaultImage: UIImage? = nil
     var documentController: UIDocumentInteractionController!
     
-    let screenShot = ShareViewController.screenshot()
-    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var overlayImageView: UIImageView!
 
+    @IBOutlet var container: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,6 @@ class ShareViewController: UIViewController, UIDocumentInteractionControllerDele
     }
     
     @IBAction func shareButton(sender: UIButton) {
-        
         self.shareToInstagram()
         _ = self.imageView.image!
         let fetchOptions = PHFetchOptions()
@@ -53,41 +51,10 @@ class ShareViewController: UIViewController, UIDocumentInteractionControllerDele
     
     // MARK: - Make Screenshot of ImageView
 
-    class func screenshot() -> UIImage {
-        var imageSize = CGSizeZero
+    class func screenshot(view: UIView) -> UIImage {
         
-        let orientation = UIApplication.sharedApplication().statusBarOrientation
-        if UIInterfaceOrientationIsPortrait(orientation) {
-            imageSize = UIScreen.mainScreen().bounds.size
-        } else {
-            imageSize = CGSize(width: UIScreen.mainScreen().bounds.size.height, height: UIScreen.mainScreen().bounds.size.width)
-        }
-        
-        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
-        let context = UIGraphicsGetCurrentContext()
-        for window in UIApplication.sharedApplication().windows {
-            CGContextSaveGState(context)
-            CGContextTranslateCTM(context, window.center.x, window.center.y)
-            CGContextConcatCTM(context, window.transform)
-            CGContextTranslateCTM(context, -window.bounds.size.width * window.layer.anchorPoint.x, -window.bounds.size.height * window.layer.anchorPoint.y)
-            if orientation == .LandscapeLeft {
-                CGContextRotateCTM(context, CGFloat(M_PI_2))
-                CGContextTranslateCTM(context, 0, -imageSize.width)
-            } else if orientation == .LandscapeRight {
-                CGContextRotateCTM(context, -CGFloat(M_PI_2))
-                CGContextTranslateCTM(context, -imageSize.height, 0)
-            } else if orientation == .PortraitUpsideDown {
-                CGContextRotateCTM(context, CGFloat(M_PI))
-                CGContextTranslateCTM(context, -imageSize.width, -imageSize.height)
-            }
-            if window.respondsToSelector(#selector(UIView.drawViewHierarchyInRect(_:afterScreenUpdates:))) {
-                window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: true)
-            } else if let context = context {
-                window.layer.renderInContext(context)
-            }
-            CGContextRestoreGState(context)
-        }
-        
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, view.opaque, 0)
+        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
@@ -109,6 +76,10 @@ class ShareViewController: UIViewController, UIDocumentInteractionControllerDele
     
     
     func shareToInstagram() {
+
+        container.addSubview(imageView)
+        container.addSubview(overlayImageView)
+        let screenShot = ShareViewController.screenshot(container)
         
         let instagramURL = NSURL(string: "instagram://app")
         
