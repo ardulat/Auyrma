@@ -1,0 +1,22 @@
+lane :release do |options|
+  cert(
+    username: "info@n17r.com"
+  )
+  produce(
+    username: "info@n17r.com",
+    app_identifier: options[:bundle],
+    app_name: options[:scheme]
+  )
+  sigh(
+    username: "info@n17r.com",
+    app_identifier: options[:bundle]
+  )
+  gym(
+    clean: true,
+    use_legacy_build_api: false,
+    output_name: "App",
+    scheme: options[:scheme],
+    output_directory: "./fastlane/build"
+  )
+  deliver
+end
