@@ -13,7 +13,7 @@ class CameraViewController: UIViewController {
     
     var previewView: UIView!
     var overlayImageView = UIImageView()
-
+    
     var session: AVCaptureSession?
     var stillImageOutput: AVCaptureStillImageOutput?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -88,7 +88,7 @@ class CameraViewController: UIViewController {
         overlayImageView.frame = previewView.bounds
         previewView.addSubview(overlayImageView)
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         videoPreviewLayer!.frame = previewView.bounds
@@ -113,10 +113,10 @@ class CameraViewController: UIViewController {
                     let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
                     let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
                     
-//                    if self.backCamera.position == .Front {
-//                        let flippedImage = UIImage(CGImage: image.CGImage!, scale: image.scale, orientation: UIImageOrientation.LeftMirrored)
-//                        image = flippedImage
-//                    }
+                    //                    if self.backCamera.position == .Front {
+                    //                        let flippedImage = UIImage(CGImage: image.CGImage!, scale: image.scale, orientation: UIImageOrientation.LeftMirrored)
+                    //                        image = flippedImage
+                    //                    }
                     
                     self.mainImage = image
                     self.performSegueWithIdentifier("SegueCaptured", sender: nil)
@@ -134,7 +134,4 @@ class CameraViewController: UIViewController {
         }
     }
 }
-
-
-
 

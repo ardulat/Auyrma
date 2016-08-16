@@ -9,6 +9,27 @@
 import UIKit
 import NVActivityIndicatorView
 import Firebase
+import SCLAlertView
+
+import SystemConfiguration
+
+public class Reachability {
+    class func isConnectedToNetwork() -> Bool {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
+        }
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
+    }
+}
 
 class AnalogResultViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -26,11 +47,27 @@ class AnalogResultViewController: UIViewController, UITableViewDataSource, UITab
     var activityIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 2, height: 2), type: NVActivityIndicatorType(rawValue: 2)!, color: UIColor.redColor(), padding: 0)
     
     let myColor : UIColor = UIColor( red: 185/255, green: 60/255, blue:60/255, alpha: 1.0)
+    
+    let appearance = SCLAlertView.SCLAppearance(
+        kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+        kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+        kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+        showCloseButton: false
+    )
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background3.jpg")!)
+        
+        guard Reachability.isConnectedToNetwork() == true else {
+            let alert = SCLAlertView(appearance: self.appearance)
+            alert.addButton("Окей", backgroundColor: self.UIColorFromRGB(0xB40431), textColor: UIColor.whiteColor(), showDurationStatus: true) {
+                return
+            }
+            alert.showInfo("Извините!", subTitle: "У вас нет интернета")
+            return
+        }
         
         self.startSearchingFirebase()
         
@@ -41,6 +78,15 @@ class AnalogResultViewController: UIViewController, UITableViewDataSource, UITab
         self.tableView.dataSource = self
         self.tableView.addSubview(self.activityIndicator)
         self.activityIndicator.startAnimation()
+    }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
     

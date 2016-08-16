@@ -15,12 +15,11 @@ import DropDown
 import Firebase
 
 class ViewController: UIViewController {
-
+    
     
     let tutorialText = ["Приложение Auyrma помогает находить вам аналоги медикаментов. При поиске аналогов приложение выдает возможные аналоги.", "Напоминания помогут вам соблюдать режим приема медикаментов для лучшего результата."]
     let tutorialTitle = ["Ознакомление", "Напоминания"]
     let tutorialButton = ["Далее", "Завершить"]
-    
     
     @IBOutlet weak var qwerty: UILabel!
     
@@ -70,8 +69,8 @@ class ViewController: UIViewController {
         
         self.activityIndicator.startAnimation()
         
-        guard NSUserDefaults.standardUserDefaults().valueForKey("firstTimeWas3") != nil else {
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstTimeWas3")
+        guard NSUserDefaults.standardUserDefaults().valueForKey("firstEnter") != nil else {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstEnter")
             // downloading all pill names in first user interaction
             
             self.qwerty.text = "загрузка таблеток"
@@ -84,35 +83,25 @@ class ViewController: UIViewController {
     }
     
     func downloadPrefixesFromFirebaseToRealm() {
-        
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            // do some task
-            let search = FIRDatabase.database().reference().child("byName")
-            search.observeEventType(.Value) {
-                (snap: FIRDataSnapshot) in
-                
-                let size = (snap.value as! [String: AnyObject]).count
-                for (a, b) in snap.value as! [String: AnyObject] {
-                    guard let word = b["name"] as? String else {
-                        continue
-                    }
-                    let realm = try! Realm()
-                    try! realm.write {
-                        let temp = Prefix()
-                        temp.name = word
-                        realm.add(temp)
-                    }
+        let ref = FIRDatabase.database().reference().child("byName")
+        ref.observeEventType(.Value) {
+            (snap: FIRDataSnapshot) in
+            let realm = try! Realm()
+            for (a, b) in snap.value as! [String: AnyObject] {
+                guard let word = b["name"] as? String else {
+                    continue
                 }
-                print("all")
-                self.textField.text = ""
-                self.qwerty.text = "Auyrma - первое бесплатное Казахстанское приложение, которое помогает сэкономить на дорогих лекарствах, предоставляя вам список их более дешевых аналогов. "
-                self.textField.placeholder = "введите название лекарства"
-                self.activityIndicator.stopAnimation()
+                try! realm.write {
+                    let temp = Prefix()
+                    temp.name = word
+                    realm.add(temp)
+                }
+                //print("all")
             }
-            dispatch_async(dispatch_get_main_queue()) {
-                // update some UI
-            }
+            self.textField.text = ""
+            self.qwerty.text = "Auyrma - первое бесплатное Казахстанское приложение, которое помогает сэкономить на дорогих лекарствах, предоставляя вам список их более дешевых аналогов. "
+            self.textField.placeholder = "введите название лекарства"
+            self.activityIndicator.stopAnimation()
         }
     }
     
@@ -121,38 +110,20 @@ class ViewController: UIViewController {
     }
     
     func searchChanged() {
-        self.tempPrefix.removeAll()
-        
         let word = self.textField.text!.lowercaseString
         let length = word.characters.count
-    
         
-        if length >= 2 {
-            
-            let search = FIRDatabase.database().reference().child("byName")
-            let q1 = search.queryOrderedByChild("name")
-            let q2 = q1.queryStartingAtValue("\(word)")
-            let q3 = q2.queryEndingAtValue("\(word)\u{f8ff}")
-            
-            q3.observeEventType(.Value) {
-                (snap: FIRDataSnapshot) in
-                for (_, b) in snap.value as! [String : AnyObject] {
-                    guard let pillName = b["name"]! else {
-                        continue
-                    }
-                    self.tempPrefix.append(pillName as! String)
-                    print("ok")
-                }
-                
-                if self.tempPrefix.count == 0 {
-                    self.tempPrefix.append("поиск не дал результатов =(")
-                }
-                
-                self.dropDown.dataSource = self.tempPrefix
-                self.dropDown.reloadAllComponents()
-                self.dropDown.show()
+        
+        if length >= 3 {
+            self.tempPrefix.removeAll()
+            let realm = try! Realm()
+            let result = Array(realm.objects(Prefix.self).filter("name CONTAINS '\(word)'"))
+            for temp in result {
+                self.tempPrefix.append(temp.name!)
             }
-            
+            self.dropDown.dataSource = self.tempPrefix
+            self.dropDown.reloadAllComponents()
+            self.dropDown.show()
         }
     }
     

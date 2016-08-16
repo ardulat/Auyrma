@@ -175,7 +175,7 @@ class PillInfoViewController: UIViewController {
         
         //  ВАЖНОО
         //  добавь эту строку
-        if final.characters.count > 9000 {
+        if final.characters.count > 20000 {
             final = "нету данных"
         }
         

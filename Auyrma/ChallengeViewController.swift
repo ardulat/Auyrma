@@ -65,7 +65,7 @@ class ChallengeViewController: UIViewController, UIImagePickerControllerDelegate
             wordsPVC.words = self.words
             wordsPVC.wordsDelegate = self
         }
-
+        
     }
     
 }
