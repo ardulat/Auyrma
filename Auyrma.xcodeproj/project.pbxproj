@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52186C921D58EDFD00B1D94B /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52186C911D58EDFD00B1D94B /* ChallengeViewController.swift */; };
-		5276ECF31D5A314100A78853 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276ECF21D5A314100A78853 /* PageViewController.swift */; };
-		5276ECF51D5A343F00A78853 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276ECF41D5A343F00A78853 /* ContentViewController.swift */; };
 		F86BA0FA04A623EB79325516 /* Pods_Auyrma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144A9B07F839D3DCCBC95241 /* Pods_Auyrma.framework */; };
 		FA0FBDD21D39056800065F0B /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDD11D39056800065F0B /* ReminderTableViewController.swift */; };
 		FA18AC741D387BA80094D5DE /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18AC731D387BA80094D5DE /* Reminder.swift */; };
@@ -20,7 +17,6 @@
 		FA3A31F91D2E3BAD00AF4C9B /* Pill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A31F81D2E3BAD00AF4C9B /* Pill.swift */; };
 		FA3EC28C1D3F4AA2005AD753 /* ConsultancyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC28B1D3F4AA2005AD753 /* ConsultancyViewController.swift */; };
 		FA72E84A1D3CEA2A009229B5 /* PharmacyGeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72E8491D3CEA2A009229B5 /* PharmacyGeoLocation.swift */; };
-		FA77E0491D543E4000C91709 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77E0481D543E4000C91709 /* CameraViewController.swift */; };
 		FA7919951D2E7C5200FCE3C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7919941D2E7C5200FCE3C7 /* AppDelegate.m */; };
 		FA7CEB451D30A6980065CD4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7CEB441D30A6980065CD4D /* GoogleService-Info.plist */; };
 		FA7CEB471D30BCA50065CD4D /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CEB461D30BCA50065CD4D /* ReminderViewController.swift */; };
@@ -35,15 +31,11 @@
 		FAA5FE911D4720D60017A418 /* RateUsUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5FE901D4720D60017A418 /* RateUsUrl.swift */; };
 		FAB284311D45EA8500CFE493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB2842F1D45EA8500CFE493 /* Main.storyboard */; };
 		FAB284331D46329000CFE493 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB284321D46329000CFE493 /* ReminderTableViewCell.swift */; };
-		FAC1482F1D5461C20001BD42 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1482E1D5461C20001BD42 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F0100A567462EA189AE5F65 /* Pods-Auyrma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auyrma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Auyrma/Pods-Auyrma.release.xcconfig"; sourceTree = "<group>"; };
 		144A9B07F839D3DCCBC95241 /* Pods_Auyrma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auyrma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52186C911D58EDFD00B1D94B /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
-		5276ECF21D5A314100A78853 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		5276ECF41D5A343F00A78853 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		72E3056C12D7B8B2304C65F2 /* Pods-Auyrma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auyrma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Auyrma/Pods-Auyrma.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0FBDD11D39056800065F0B /* ReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
 		FA18AC731D387BA80094D5DE /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
@@ -54,7 +46,6 @@
 		FA3A31F81D2E3BAD00AF4C9B /* Pill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pill.swift; sourceTree = "<group>"; };
 		FA3EC28B1D3F4AA2005AD753 /* ConsultancyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultancyViewController.swift; sourceTree = "<group>"; };
 		FA72E8491D3CEA2A009229B5 /* PharmacyGeoLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PharmacyGeoLocation.swift; sourceTree = "<group>"; };
-		FA77E0481D543E4000C91709 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FA7919931D2E7C5200FCE3C7 /* Auyrma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Auyrma-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA7919941D2E7C5200FCE3C7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FA7CEB441D30A6980065CD4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -72,7 +63,6 @@
 		FAA5FE901D4720D60017A418 /* RateUsUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateUsUrl.swift; sourceTree = "<group>"; };
 		FAB284301D45EA8500CFE493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAB284321D46329000CFE493 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
-		FAC1482E1D5461C20001BD42 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +97,6 @@
 		FA3A31F01D2E367900AF4C9B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FA77E0481D543E4000C91709 /* CameraViewController.swift */,
 				FA83D65F1D2E2BBF001F5538 /* ViewController.swift */,
 				FA3A31F31D2E37AF00AF4C9B /* MyPillViewController.swift */,
 				FA3A31F51D2E388700AF4C9B /* AnalogResultViewController.swift */,
@@ -119,10 +108,6 @@
 				FAA5FE8E1D47208A0017A418 /* RateUsViewController.swift */,
 				FA3EC28B1D3F4AA2005AD753 /* ConsultancyViewController.swift */,
 				FA7CEB481D30BF570065CD4D /* PickDaysViewController.swift */,
-				FAC1482E1D5461C20001BD42 /* ShareViewController.swift */,
-				52186C911D58EDFD00B1D94B /* ChallengeViewController.swift */,
-				5276ECF21D5A314100A78853 /* PageViewController.swift */,
-				5276ECF41D5A343F00A78853 /* ContentViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -315,13 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52186C921D58EDFD00B1D94B /* ChallengeViewController.swift in Sources */,
-				FAC1482F1D5461C20001BD42 /* ShareViewController.swift in Sources */,
 				FA3A31F91D2E3BAD00AF4C9B /* Pill.swift in Sources */,
-				FA77E0491D543E4000C91709 /* CameraViewController.swift in Sources */,
 				FAA5FE8F1D47208A0017A418 /* RateUsViewController.swift in Sources */,
 				FA83D6601D2E2BBF001F5538 /* ViewController.swift in Sources */,
-				5276ECF31D5A314100A78853 /* PageViewController.swift in Sources */,
 				FA3A31F61D2E388700AF4C9B /* AnalogResultViewController.swift in Sources */,
 				FA83D65E1D2E2BBF001F5538 /* AppDelegate.swift in Sources */,
 				FA3A31F21D2E36AF00AF4C9B /* PharmacyLocationViewController.swift in Sources */,
@@ -331,7 +312,6 @@
 				FA18AC761D387DCC0094D5DE /* ReminderListViewController.swift in Sources */,
 				FA7CEB471D30BCA50065CD4D /* ReminderViewController.swift in Sources */,
 				FA18AC741D387BA80094D5DE /* Reminder.swift in Sources */,
-				5276ECF51D5A343F00A78853 /* ContentViewController.swift in Sources */,
 				FA7919951D2E7C5200FCE3C7 /* AppDelegate.m in Sources */,
 				FAB284331D46329000CFE493 /* ReminderTableViewCell.swift in Sources */,
 				FA72E84A1D3CEA2A009229B5 /* PharmacyGeoLocation.swift in Sources */,
